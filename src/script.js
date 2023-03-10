@@ -1,22 +1,81 @@
 import './style.css'
 import * as THREE from 'three'
-import * as dat from 'dat.gui'
+
 import gsap from "gsap"
+
+//Fancy js
+const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+
+const hackerAnimation = event => {
+    let iterations = 0;
+
+    const interval = setInterval(() => {
+        event.target.innerText = event.target.innerText.split("")
+            .map((letter, index) => {
+                if (index < iterations) {
+                    return event.target.dataset.value[index]
+                }
+
+                return letters[Math.floor(Math.random() * 26)]
+            })
+            .join("");
+
+        if (iterations >= event.target.dataset.value.length) clearInterval(interval);
+        iterations += 1 / 3;
+
+    }, 30)
+}
+
+const hackerAnimation2 = event => {
+    let iterations = 0;
+
+    const interval = setInterval(() => {
+        event.innerText = event.innerText.split("")
+            .map((letter, index) => {
+                if (index < iterations) {
+                    return event.dataset.value[index]
+                }
+
+                return letters[Math.floor(Math.random() * 26)]
+            })
+            .join("");
+
+        if (iterations >= event.dataset.value.length) clearInterval(interval);
+        iterations += 1 / 3;
+
+    }, 30)
+}
+
+document.querySelector("#myname1").onmouseover = event => {
+    hackerAnimation(event)
+}
+
+document.querySelector("#myname2").onmouseover = event => {
+    hackerAnimation(event)
+}
+document.querySelector("#myname3").onmouseover = event => {
+    hackerAnimation(event)
+}
+document.querySelector("#myname4").onmouseover = event => {
+    hackerAnimation(event)
+}
+
+document.querySelector("#wave").onclick = () => {
+    document.querySelector("#wave").classList.toggle("wave")
+}
+
+
 
 /**
  * Debug
  */
-const gui = new dat.GUI({ closed: true })
+
 
 const parameters = {
     materialColor: '#1faec0'
 }
 
-gui
-    .addColor(parameters, 'materialColor')
-    .onChange(() => {
-        material.color.set(parameters.materialColor)
-    })
+
 
 /**
  * Base
@@ -31,12 +90,22 @@ const scene = new THREE.Scene()
 
 
 const textureLoader = new THREE.TextureLoader()
-const gradientTexture = textureLoader.load('textures/gradients/3.jpg')
+const gradientTexture1 = textureLoader.load('textures/gradients/3.jpg')
+gradientTexture1.magFilter = THREE.NearestFilter
+/**
+ * Test cube
+ */
+const material3 = new THREE.MeshToonMaterial({
+    color: parameters.materialColor,
+    gradientMap: gradientTexture1
+})
+
+const gradientTexture = textureLoader.load('textures/gradients/5.jpg')
 gradientTexture.magFilter = THREE.NearestFilter
 /**
  * Test cube
  */
-const material = new THREE.MeshToonMaterial({
+const material5 = new THREE.MeshToonMaterial({
     color: parameters.materialColor,
     gradientMap: gradientTexture
 })
@@ -45,25 +114,32 @@ const objectsDistance = 4
 
 
 const mesh1 = new THREE.Mesh(
-    new THREE.TorusGeometry(1, 0.4, 16, 60),
-    material
+    new THREE.IcosahedronGeometry(1, 0),
+    material5
 )
 const mesh2 = new THREE.Mesh(
-    new THREE.ConeGeometry(1, 2, 32),
-    material
+    new THREE.TorusGeometry(1, 0.4, 16, 60),
+    material3
 )
 const mesh3 = new THREE.Mesh(
     new THREE.TorusKnotGeometry(0.8, 0.35, 100, 16),
-    material
+    material3
 )
 
 mesh1.position.y = - objectsDistance * 0
 mesh2.position.y = - objectsDistance * 1
 mesh3.position.y = - objectsDistance * 2
 
-mesh1.position.x = - 1
-mesh2.position.x = 1
-mesh3.position.x = - 1
+let scaleValue = 2;
+if (window.innerWidth <= 768) {
+    scaleValue = 0.5
+}
+
+
+
+mesh1.position.x = - scaleValue
+mesh2.position.x = scaleValue
+mesh3.position.x = - scaleValue
 
 
 scene.add(mesh1, mesh2, mesh3)
@@ -147,21 +223,39 @@ renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
 let scrollY = window.scrollY
 let currentSection = 0
 
-window.addEventListener("scroll", () => {
+
+window.addEventListener("scroll", async () => {
     scrollY = window.scrollY
 
     const newSection = Math.round(scrollY / sizes.height)
     if (newSection != currentSection) {
         currentSection = newSection
-        gsap.to(
-            sectionMeshes[currentSection].rotation, {
-            duration: 1.5,
-            ease: 'power2.inOut',
-            x: '+=6',
-            y: '+=3',
-            z: '+=1.5',
+        if (newSection == 0) {
+            const event1 = await document.querySelector("#myname1")
+            const event2 = await document.querySelector("#myname2")
+            hackerAnimation2(event1)
+            hackerAnimation2(event2)
         }
-        )
+        if (newSection == 1) {
+            const event3 = await document.querySelector("#myname3")
+            hackerAnimation2(event3)
+
+        }
+        if (newSection == 2) {
+            const event4 = await document.querySelector("#myname4")
+            hackerAnimation2(event4)
+        }
+
+
+        // gsap.to(
+        //     sectionMeshes[currentSection].rotation, {
+        //     duration: 1.5,
+        //     ease: 'power2.inOut',
+        //     x: '+=6',
+        //     y: '+=3',
+        //     z: '+=1.5',
+        // }
+        // )
     }
 })
 
@@ -172,6 +266,12 @@ window.addEventListener("mousemove", (event) => {
     cursor.y = event.clientY / sizes.height - 0.5
 })
 
+window.addEventListener("deviceorientation", (event) => {
+    cursor.x = event.alpha / sizes.width - 0.5
+    cursor.y = event.beta / sizes.width - 0.5
+
+})
+
 
 
 /**
@@ -179,13 +279,14 @@ window.addEventListener("mousemove", (event) => {
  */
 const clock = new THREE.Clock()
 let previousTime = 0
+let changeSize = 2
 
 const tick = () => {
+
+
     const elapsedTime = clock.getElapsedTime()
     const deltaTime = elapsedTime - previousTime
     previousTime = elapsedTime
-
-
 
     camera.position.y = - scrollY / sizes.height * objectsDistance
 
