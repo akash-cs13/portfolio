@@ -1,16 +1,5 @@
-# Three.js Journey
-
-## Setup
-Download [Node.js](https://nodejs.org/en/download/).
-Run this followed commands:
-
-``` bash
-# Install dependencies (only the first time)
-npm install
-
-# Run the local server at localhost:8080
-npm run dev
-
-# Build for production in the dist/ directory
-npm run build
-```
+# First Portfolio Website built with ThreeJS
+Super simple single page website.
+##
+Preview:
+![Screenshot 2023-04-16 023516](https://user-images.githubusercontent.com/84382172/232253173-e7d2d5b0-5f8f-4408-b187-507517507d53.png)
