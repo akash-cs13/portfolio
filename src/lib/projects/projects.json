@@ -1,0 +1,186 @@
+{
+  "template": {
+    "name": "",
+    "year": "",
+    "tags": [""],
+    "description": "",
+    "links": {
+      "main": {
+        "show": false,
+        "link": "",
+        "redirect": true
+      },
+      "github": {
+        "show": false,
+        "link": ""
+      },
+      "other": [
+        {
+          "show": false,
+          "name": "",
+          "link": "",
+          "redirect": false
+        }
+      ]
+    }
+  },
+  "archive": [
+    {
+      "name": "M.A.R.K Dashboard",
+      "year": "2023",
+      "tags": ["SvelteKit"],
+      "description": "Dashboard for M.A.R.K, made with SvelteKit.",
+      "links": {
+        "main": {
+          "show": false,
+          "link": "",
+          "redirect": true
+        },
+        "github": {
+          "show": false,
+          "link": ""
+        },
+        "other": [
+          {
+            "show": false,
+            "name": "",
+            "link": "",
+            "redirect": false
+          }
+        ]
+      }
+    },
+    {
+      "name": "Gif to PBM",
+      "year": "2023",
+      "tags": ["Python"],
+      "description": "Developed software to play GIFs on I2C Oled display, by converting GIFs to PBM format using python with features such as frame rate control, resizing and cropping.",
+      "links": {
+        "main": {
+          "show": false,
+          "link": "",
+          "redirect": true
+        },
+        "github": {
+          "show": true,
+          "link": "https://github.com/akash-cs13/gif_to_pbm"
+        },
+        "other": [
+          {
+            "show": false,
+            "name": "",
+            "link": "",
+            "redirect": false
+          }
+        ]
+      }
+    },
+    {
+      "name": "Svelteify",
+      "year": "2023",
+      "tags": ["PWA", "SvelteKit", "Firebase"],
+      "description": "A PWA musicplayer built with SvelteKit, Firebase and IndexedDB.",
+      "links": {
+        "main": {
+          "show": true,
+          "link": "https://mymusicapp-three.vercel.app/",
+          "redirect": true
+        },
+        "github": {
+          "show": true,
+          "link": "https://github.com/akash-cs13/pwa-music"
+        },
+        "other": [
+          {
+            "show": true,
+            "name": "Read More",
+            "link": "/projects/svelteify",
+            "redirect": false
+          }
+        ]
+      }
+    },
+    {
+      "name": "M.A.R.K",
+      "year": "2022",
+      "tags": ["Docker", "Linux", "SvelteKit"],
+      "description": "Utilizing Docker microservices on a Raspberry Pi to provide a versatile home server solution with features such as media server and network attached storage, all managed through a customizable SvelteKit dashboard.",
+      "links": {
+        "main": { "show": true, "link": "/projects/mark", "redirect": false },
+        "github": { "show": false, "link": "" },
+        "other": [{ "show": false, "name": "", "link": "", "redirect": false }]
+      }
+    },
+    {
+      "name": "Design of Smart Attachment for Refrigerator",
+      "year": "2022",
+      "tags": ["Python", "Selenium", "IBM Cloud", "React"],
+      "description": "An IoT automation solution that utilizes image-based grocery detection and web scraping to facilitate price comparison.",
+      "links": {
+        "main": { "show": false, "link": "", "redirect": false },
+        "github": {
+          "show": true,
+          "link": "https://github.com/akash-cs13/dsatm-react-webpage"
+        },
+        "other": [
+          {
+            "show": true,
+            "name": "Publication",
+            "link": "https://ieeexplore.ieee.org/document/10060444",
+            "redirect": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "Remote Asset Monitoring using IBM Watson",
+      "year": "2021",
+      "tags": ["LabVIEW", "NI myDAQ", "IBM Watson"],
+      "description": "Implemented a scalable remote asset monitoring system with LabVIEW, NI myDAQ and IBM Watson Iot Platform during internship at VI Solutions, Bengaluru.",
+      "links": {
+        "main": {
+          "show": false,
+          "link": "",
+          "redirect": true
+        },
+        "github": {
+          "show": false,
+          "link": ""
+        },
+        "other": [
+          {
+            "show": false,
+            "name": "",
+            "link": "",
+            "redirect": false
+          }
+        ]
+      }
+    },
+    {
+      "name": "Face Recognition and QR Code Door Unlock",
+      "year": "2021",
+      "tags": ["Python", "Flask", "SQLite"],
+      "description": "Two-staged face recognition system using Haar Cascade and HOG, and QR code generated with Python. A SQLite database and HTML webpage.",
+      "links": {
+        "main": {
+          "show": false,
+          "link": "",
+          "redirect": true
+        },
+        "github": {
+          "show": true,
+          "link": "https://github.com/akash-cs13/mini_project"
+        },
+        "other": [
+          {
+            "show": false,
+            "name": "",
+            "link": "",
+            "redirect": false
+          }
+        ]
+      }
+    }
+  ]
+}

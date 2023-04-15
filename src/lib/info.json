@@ -1,0 +1,71 @@
+{
+  "skills": [
+    "C",
+    "C++",
+    "Python",
+    "JavaScript(ES6)",
+    "SQL",
+    "React",
+    "SvelteKit",
+    "Linux",
+    "Blender",
+    "Photoshop",
+    "Figma"
+  ],
+  "projects": [
+    {
+      "name": "M.A.R.K",
+      "align": "right",
+      "description": "With the idea to leverage the power of Wi-Fi hotspots, which have already proven capable of transferring media through apps like Shareit, SendAnywhere, and Xender. M.A.R.K was developed, a Raspberry Pi-based home media server and a network-attached storage all in one made possible with docker microservices.",
+      "link": {
+        "main": { "show": true, "link": "/projects/mark", "redirect": false },
+        "github": { "show": false, "link": "" },
+        "other": [{ "show": false, "name": "", "link": "", "redirect": false }]
+      }
+    },
+    {
+      "name": "Svelteify",
+      "align": "left",
+      "description": "With the idea to store images and files in <a class=\"specialLink rem1p3\" href=\"https://hacks.mozilla.org/2012/02/storing-images-and-files-in-indexeddb/\" target=\"_blank\">IndexedDB</a> for offline caching, Svelteify was born, borrowing inspiration from a <a class=\"specialLink rem1p3\" href=\"https://www.figma.com/community/file/976054929108031412?comment=1225042566919312681\" target=\"_blank\">mobile-friendly design</a> using SvelteKit, Firebase, and Indexed DB.",
+      "link": {
+        "main": {
+          "show": true,
+          "link": "https://mymusicapp-three.vercel.app/",
+          "redirect": true
+        },
+        "github": {
+          "show": true,
+          "link": "https://github.com/akash-cs13/pwa-music"
+        },
+        "other": [
+          {
+            "show": true,
+            "name": "Read More",
+            "link": "/projects/svelteify",
+            "redirect": false
+          }
+        ]
+      }
+    },
+    {
+      "name": "Design of Smart Attachment for Refrigerator",
+      "align": "right",
+      "description": "With an idea to simplify the online shopping experience, a smart iot attachment was developed with web scrapping, grocery detection model, IBM cloud, and React-based user interface.",
+      "link": {
+        "main": { "show": false, "link": "", "redirect": false },
+        "github": {
+          "show": true,
+          "link": "https://github.com/akash-cs13/dsatm-react-webpage"
+        },
+        "other": [
+          {
+            "show": true,
+            "name": "Publication",
+            "link": "https://ieeexplore.ieee.org/document/10060444",
+            "redirect": true
+          }
+        ]
+      }
+    }
+  ]
+}
