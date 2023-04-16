@@ -6,6 +6,13 @@
   import { gsap } from "gsap/dist/gsap";
 
   let run = true;
+  let delay = 1.5;
+  initialLoad.subscribe((data) => {
+    if (data == false) {
+      run = false;
+      delay = 0;
+    }
+  });
 
   onMount(() => {
     initialLoad.subscribe((data) => {
@@ -23,13 +30,13 @@
     gsap.from(".myname", {
       y: 150,
       opacity: 0,
-      delay: 1.5,
+      delay: delay,
       duration: 0.8,
     });
     gsap.from(".tagline", {
       y: 150,
       opacity: 0,
-      delay: 2,
+      delay: delay + 0.5,
       duration: 0.8,
     });
 
@@ -49,7 +56,6 @@
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
-        console.log(entry);
         if (entry.isIntersecting) {
           entry.target.classList.add("show");
         }

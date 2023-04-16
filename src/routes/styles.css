@@ -14,6 +14,7 @@
   --opaque-accent-color: #f8a20c28;
   --nav-height: 5rem;
   --harburger-line-width: 3px;
+
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -243,6 +244,8 @@ svg.clickable:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  z-index: 10;
 }
 
 .toTop svg {
@@ -765,4 +768,12 @@ svg.clickable:hover {
   .animation {
     transition: none;
   }
+}
+
+.darkFont {
+  color: var(--background-color);
+}
+
+.darkFont::after {
+  background-color: var(--background-color);
 }
