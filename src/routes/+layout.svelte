@@ -2,8 +2,10 @@
   import { onMount } from "svelte";
   import MediaQuery from "./MediaQuery.svelte";
   import "./styles.css";
+  import { afterNavigate, beforeNavigate } from "$app/navigation";
 
   let toggle = "close";
+  let root: any;
 
   const navlinks = [
     {
@@ -25,6 +27,9 @@
   ];
 
   onMount(() => {
+    root = document.getElementsByTagName("html")[0];
+    root?.classList.add("smoothscroll");
+
     const navbar = document.querySelector(".navbar");
     let lastScrollY = window.scrollY;
     window.addEventListener("scroll", () => {
@@ -38,6 +43,13 @@
       }
       lastScrollY = window.scrollY;
     });
+  });
+
+  beforeNavigate(() => {
+    root?.classList.remove("smoothscroll");
+  });
+  afterNavigate(() => {
+    root?.classList.add("smoothscroll");
   });
 </script>
 

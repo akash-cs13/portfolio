@@ -106,9 +106,16 @@
       "tags": ["Docker", "Linux", "SvelteKit"],
       "description": "Utilizing Docker microservices on a Raspberry Pi to provide a versatile home server solution with features such as media server and network attached storage, all managed through a customizable SvelteKit dashboard.",
       "links": {
-        "main": { "show": true, "link": "/projects/mark", "redirect": false },
+        "main": { "show": false, "link": "", "redirect": false },
         "github": { "show": false, "link": "" },
-        "other": [{ "show": false, "name": "", "link": "", "redirect": false }]
+        "other": [
+          {
+            "show": true,
+            "name": "Read More",
+            "link": "/projects/mark",
+            "redirect": false
+          }
+        ]
       }
     },
     {

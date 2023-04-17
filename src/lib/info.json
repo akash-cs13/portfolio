@@ -18,9 +18,16 @@
       "align": "right",
       "description": "With the idea to leverage the power of Wi-Fi hotspots, which have already proven capable of transferring media through apps like Shareit, SendAnywhere, and Xender. M.A.R.K was developed, a Raspberry Pi-based home media server and a network-attached storage all in one made possible with docker microservices.",
       "link": {
-        "main": { "show": true, "link": "/projects/mark", "redirect": false },
+        "main": { "show": false, "link": "/projects/mark", "redirect": false },
         "github": { "show": false, "link": "" },
-        "other": [{ "show": false, "name": "", "link": "", "redirect": false }]
+        "other": [
+          {
+            "show": true,
+            "name": "Read More",
+            "link": "/projects/mark",
+            "redirect": false
+          }
+        ]
       }
     },
     {

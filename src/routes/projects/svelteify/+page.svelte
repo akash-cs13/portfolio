@@ -4,7 +4,21 @@
   import Image1 from "$lib/projects/svelteify/image (1).png";
   import Image2 from "$lib/projects/svelteify/image (2).png";
   import Image3 from "$lib/projects/svelteify/image (3).png";
+  import Image4 from "$lib/projects/svelteify/image (4).png";
+  import Image5 from "$lib/projects/svelteify/image (5).png";
+  import Image6 from "$lib/projects/svelteify/image (6).png";
   import PwaLogo from "$lib/projects/svelteify/pwa.png";
+  import Pwa1Logo from "$lib/projects/svelteify/pwa1.png";
+  import Pwa2Logo from "$lib/projects/svelteify/pwa2.png";
+  import Bgplay1Logo from "$lib/projects/svelteify/bgplay1.png";
+  import Bgplay2Logo from "$lib/projects/svelteify/bgplay2.png";
+  import GithubLogo from "$lib/projects/svelteify/github.png";
+  import SvelteKitLogo from "$lib/projects/svelteify/sveltekit.png";
+  // import SvelteLogo from "$lib/projects/svelteify/svelte.png";
+  // import TypescriptLogo from "$lib/projects/svelteify/typescript.png";
+  // import CssLogo from "$lib/projects/svelteify/css.png";
+  import FirestoreDatabaseLogo from "$lib/projects/svelteify/fdatabase.png";
+  import FirestoreStorageLogo from "$lib/projects/svelteify/fstorage.png";
   import FirebaseLogo from "$lib/projects/svelteify/firebase.png";
   import IndexedDBLogo from "$lib/projects/svelteify/indexeddb.png";
   import { onMount } from "svelte";
@@ -95,88 +109,208 @@
       </p>
     </div>
     <div class="innerSection">
-      <h1 class="rem5 lightFont">Features</h1>
-      <div class="features">
-        <div class="specialcard pwa animation" style="transition-delay: 200ms;">
+      <h1 class="rem5 lightFont">Tech stack</h1>
+      <div class="techStack">
+        <div
+          class="specialcard firebase animation"
+          style="transition-delay: 100ms;"
+        >
           <div class="cardheading">
             <div>
-              <img src={PwaLogo} alt="🪲" srcset="" />
+              <h2 class="rem1p5 lightFont">Front-end</h2>
             </div>
-            <div />
           </div>
-          <div>
-            <p class="rem1p3">
-              Cross-platform compatible and provides app-like experience.
-            </p>
+          <div class="cardheading">
+            <div>
+              <img src={SvelteKitLogo} alt="" srcset="" />
+            </div>
+            <div>
+              <h2 class="rem1p5">SvelteKit</h2>
+            </div>
           </div>
         </div>
 
         <div
           class="specialcard firebase animation"
-          style="transition-delay: 400ms;"
+          style="transition-delay: 200ms;"
         >
           <div class="cardheading">
             <div>
-              <img src={FirebaseLogo} alt="🪲" srcset="" />
-            </div>
-            <div>
-              <h2 class="rem1p5 lightFont">Firebase</h2>
+              <h2 class="rem1p5 lightFont">Database</h2>
             </div>
           </div>
-          <div>
-            <p class="rem1p3">Access and share your playlist from anywhere.</p>
+          <div class="cardheading">
+            <div>
+              <img src={FirestoreDatabaseLogo} alt="" srcset="" />
+            </div>
+            <div>
+              <h2 class="rem1p5">Firestore Database</h2>
+            </div>
           </div>
         </div>
 
         <div
-          class="specialcard indexeddb animation"
-          style="transition-delay: 600ms;"
+          class="specialcard firebase animation"
+          style="transition-delay: 300ms;"
         >
-          <div class="cardheading" style="gap: 0.2rem;">
+          <div class="cardheading">
             <div>
-              <img
-                src={IndexedDBLogo}
-                style="width: 3rem;"
-                alt="🪲"
-                srcset=""
-              />
-            </div>
-            <div>
-              <h2 class="rem1p5 lightFont">IndexedDB</h2>
+              <h2 class="rem1p5 lightFont">Cloud Stroage</h2>
             </div>
           </div>
-          <div>
-            <p class="rem1p3">
-              Download and listen to your audio files, even when you're offline.
-            </p>
+          <div class="cardheading">
+            <div>
+              <img src={FirestoreStorageLogo} alt="" srcset="" />
+            </div>
+            <div>
+              <h2 class="rem1p5">Firestore Storage</h2>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
 </section>
-<section class=" accentSection">
+<section class="accentSection">
   <div class="heroSection">
-    <h1 class="rem5 darkFont">Design</h1>
-    <p class="rem1p3 darkFont">
-      Heavily inspired from
-      <strong>
-        <a
-          class="specialLink rem1p3 darkFont"
-          href="https://www.figma.com/community/file/976054929108031412?comment=1225042566919312681"
-          target="_blank">Sumit Singh's</a
-        >
-      </strong>
-      design, Svelteify boasts easy navigation, clear icons, and smooth transitions.
-      Check out there complete design
-      <strong>
-        <a
-          href="https://www.figma.com/file/r5WY6m5OGDc9aGIJGfY8yo/pwa-music?node-id=0%3A1&t=Q2rgQIyXUMh4t6b9-1"
-          class="specialLink rem1p3 darkFont"
-          target="_blank">here.</a
-        >
-      </strong>
-    </p>
+    <div class="empty" />
+    <div class="design">
+      <h1 class="rem5 darkFont">Design</h1>
+      <p class="rem1p3 darkFont">
+        Heavily inspired from
+        <strong>
+          <a
+            class="specialLink rem1p3 darkFont"
+            href="https://www.figma.com/community/file/976054929108031412?comment=1225042566919312681"
+            target="_blank">Sumit Singh's</a
+          >
+        </strong>
+        design, Svelteify boasts easy navigation, clear icons, and smooth transitions.
+        Check out there complete design
+        <strong>
+          <a
+            href="https://www.figma.com/file/r5WY6m5OGDc9aGIJGfY8yo/pwa-music?node-id=0%3A1&t=Q2rgQIyXUMh4t6b9-1"
+            class="specialLink rem1p3 darkFont"
+            target="_blank">here.</a
+          >
+        </strong>
+      </p>
+    </div>
+    <div class="empty" />
+    <div class="features">
+      <h1 class="rem5 darkFont">Features</h1>
+      <div class="featuresList">
+        <div class="specialcard animation">
+          <div class="cardheading">
+            <div>
+              <img src={PwaLogo} alt="" srcset="" />
+            </div>
+          </div>
+          <div class="cardcontent">
+            <p class="rem1p3 lightFont">Install as an app.</p>
+            <div class="cardcontentImages2 changeLater">
+              <img class="shadow" src={Pwa2Logo} alt="" />
+              <img class="shadow" src={Pwa1Logo} alt="" />
+            </div>
+          </div>
+        </div>
+
+        <div class="specialcard animation">
+          <div class="cardheading">
+            <div>
+              <img src={FirebaseLogo} alt="" srcset="" />
+            </div>
+          </div>
+          <div class="cardcontent">
+            <p class="rem1p3 lightFont">
+              Upload music and listen to it from Firebase.
+            </p>
+            <div class="cardcontentImages">
+              <img src={Image5} alt="" />
+              <img src={Image6} alt="" />
+            </div>
+          </div>
+        </div>
+
+        <div class="specialcard animation">
+          <div class="cardheading">
+            <div>
+              <img src={IndexedDBLogo} alt="" srcset="" />
+            </div>
+          </div>
+          <div class="cardcontent">
+            <p class="rem1p3 lightFont">
+              Download songs and save it to IndexedDB.
+            </p>
+            <div class="cardcontentImages">
+              <img src={Image1} alt="" />
+              <img src={Image4} alt="" />
+            </div>
+          </div>
+        </div>
+
+        <div class="specialcard animation">
+          <div class="cardheading">
+            <div>
+              <img src={SvelteKitLogo} alt="" srcset="" />
+            </div>
+          </div>
+          <div class="cardcontent">
+            <p class="rem1p3 lightFont">
+              Uplaod a .lrc file, and get real-time lyrics.
+            </p>
+            <div class="cardcontentImages">
+              <img src={Image5} alt="" />
+              <img src={Image3} alt="" />
+            </div>
+          </div>
+        </div>
+
+        <div class="specialcard animation">
+          <div class="cardheading">
+            <div>
+              <img src={Icon} alt="" srcset="" />
+            </div>
+          </div>
+          <div class="cardcontent">
+            <p class="rem1p3 lightFont">
+              Play and control music in the background.
+            </p>
+            <div class="cardcontentImages2">
+              <img src={Bgplay1Logo} alt="" />
+              <img src={Bgplay2Logo} alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="align-items: center;">
+  <div class="heroSection">
+    <h1 class="rem5 lightFont">Try now.</h1>
+    <div class="svelteifyLinks">
+      <a
+        class="animation"
+        href="https://mymusicapp-three.vercel.app/"
+        target="_blank"
+        ><div>
+          <img src={Icon} alt="" />
+          <h1 class="rem1p5"><strong>SVELTE</strong>IFY</h1>
+        </div></a
+      >
+      <a
+        class="animation"
+        href="https://github.com/akash-cs13/pwa-music"
+        target="_blank"
+      >
+        <div>
+          <img src={GithubLogo} alt="" />
+          <h1 class="rem1p5"><strong>Code</strong></h1>
+        </div>
+      </a>
+    </div>
   </div>
 </section>
 

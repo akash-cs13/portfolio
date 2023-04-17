@@ -191,7 +191,7 @@
   background: var(--font-color);
 }
 
-html {
+html.smoothscroll {
   scroll-behavior: smooth;
 }
 body {
