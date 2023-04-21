@@ -396,7 +396,14 @@ svg.clickable:hover {
 
 .banner {
   background-color: #f8a00c28;
+
   border-radius: 4px;
+}
+
+.banner {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
 }
 
 .info {
@@ -734,6 +741,11 @@ svg.clickable:hover {
     text-align: start;
     text-justify: auto;
   }
+
+  .banner {
+    background-color: var(--card-background-color);
+    background-blend-mode: none;
+  }
 }
 
 @media only screen and (max-width: 370px) {
@@ -758,7 +770,7 @@ svg.clickable:hover {
 .animation {
   opacity: 0;
   transform: translateY(5rem);
-  transition: all 1s;
+  transition: transform 1s, opacity 1s;
 }
 .animation.show {
   transform: translateY(0);

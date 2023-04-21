@@ -53,6 +53,20 @@
   });
 </script>
 
+<svelte:head>
+  <!-- og graph -->
+  <meta property="og:title" content="A portfolio website." />
+  <meta property="og:url" content="https://www.akashcs.dev/" />
+  <meta
+    property="og:description"
+    content="Meet Akash, an engineer based in Bengaluru, India with a passion for bringing ideas to life."
+  />
+  <meta property="og:type" content="profile" />
+  <meta property="og:image" content="https://imgur.com/a/k1sNmEz" />
+  <meta property="og:image:width" content="1024" />
+  <meta property="og:image:height" content="1024" />
+</svelte:head>
+
 <MediaQuery query="(min-width: 601px)" let:matches>
   {#if matches}
     <nav class="navbar shadow">
@@ -74,6 +88,7 @@
     <div class="navbutton shadow {toggle}">
       <button
         id="hamburger"
+        aria-label="Navigation Bar"
         class={toggle}
         on:click={() => {
           if (toggle == "close") {

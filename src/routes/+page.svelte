@@ -3,10 +3,10 @@
   import Info from "$lib/info.json";
   import { onMount } from "svelte";
   import { initialLoad } from "./stores";
-  import { gsap } from "gsap/dist/gsap";
+  import MediaQuery from "./MediaQuery.svelte";
 
   let run = true;
-  let delay = 1.5;
+  let delay = 1500;
   initialLoad.subscribe((data) => {
     if (data == false) {
       run = false;
@@ -26,19 +26,6 @@
       initialLoad.set(false);
       run = false;
     }, 1500);
-
-    gsap.from(".myname", {
-      y: 150,
-      opacity: 0,
-      delay: delay,
-      duration: 0.8,
-    });
-    gsap.from(".tagline", {
-      y: 150,
-      opacity: 0,
-      delay: delay + 0.5,
-      duration: 0.8,
-    });
 
     const toTop = document.querySelector(".toTop");
     const height = window.innerHeight;
@@ -73,10 +60,10 @@
     <h3 class="rem1p5 accent">
       Hi{#if run} <span class="wave">👋</span> {:else}, I'm{/if}
     </h3>
-    <h1 class="rem5 lightFont myname">
+    <h1 class="rem5 lightFont animation" style="transition-delay: {delay}ms;">
       <strong class="accent">Akash</strong> Cuntur Shrinivasmurthy.
     </h1>
-    <h1 class="rem3 tagline">
+    <h1 class="rem3 animation" style="transition-delay: {delay + 200}ms;">
       Turning ideas into real life products is my calling.
     </h1>
     <p />
@@ -119,7 +106,7 @@
         <a class="specialLink rem1p3" href="#Contact">Let's work together</a>
         to turn your vision into a reality!<br /><br />
       </p>
-      <img class="profilePhoto animation" src={MyPhoto} alt="" srcset="" />
+      <img class="profilePhoto animation" src={MyPhoto} alt="Akash" />
     </div>
     <div class="skills animation">
       <p class="rem1p3">Technologies I'm comfortable with</p>
@@ -137,7 +124,19 @@
     <div class="featuredProjects">
       {#each Info.projects as project}
         <div class="project {project.align}  animation">
-          <div class="banner" />
+          <MediaQuery query="(min-width: 601px)" let:matches>
+            {#if matches}
+              <div
+                class="banner"
+                style="background-image: url({project.banner}), linear-gradient(var(--opaque-accent-color),var(--opaque-accent-color));"
+              />
+            {/if}
+          </MediaQuery>
+          <MediaQuery query="(max-width: 600px)" let:matches>
+            {#if matches}
+              <div class="banner" />
+            {/if}
+          </MediaQuery>
           <div class="info">
             <div class="name">
               <h1 class="lightFont">{project.name}</h1>
