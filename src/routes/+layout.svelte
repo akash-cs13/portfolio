@@ -130,46 +130,25 @@
     font-weight: 300;
     src: url("/fonts/Calibre/Calibre-Light.ttf") format("truetype");
   }
-  @font-face {
-    font-family: "Calibre";
-    font-style: italic;
-    font-weight: 300;
-    src: url("/fonts/Calibre/Calibre-LightItalic.ttf") format("truetype");
-  }
+
   @font-face {
     font-family: "Calibre";
     font-style: normal;
     font-weight: 400;
     src: url("/fonts/Calibre/Calibre-Regular.ttf") format("truetype");
   }
-  @font-face {
-    font-family: "Calibre";
-    font-style: italic;
-    font-weight: 400;
-    src: url("/fonts/Calibre/Calibre-RegularItalic.ttf") format("truetype");
-  }
+
   @font-face {
     font-family: "Calibre";
     font-style: normal;
     font-weight: 500;
     src: url("/fonts/Calibre/Calibre-Medium.ttf") format("truetype");
   }
-  @font-face {
-    font-family: "Calibre";
-    font-style: italic;
-    font-weight: 500;
-    src: url("/fonts/Calibre/Calibre-MediumItalic.ttf") format("truetype");
-  }
+
   @font-face {
     font-family: "Calibre";
     font-style: normal;
     font-weight: 600;
     src: url("/fonts/Calibre/Calibre-Semibold.ttf") format("truetype");
-  }
-  @font-face {
-    font-family: "Calibre";
-    font-style: italic;
-    font-weight: 600;
-    src: url("/fonts/Calibre/Calibre-SemiboldItalic.ttf") format("truetype");
   }
 </style>
