@@ -26,6 +26,37 @@
   },
   "archive": [
     {
+    "name": "Smoll GPT",
+    "year": "2025",
+    "tags": ["gpt-2", "nanogpt"],
+    "description": "A compact language model",
+    "links": {
+      "main": {
+        "show": true,
+        "link": "https://wine-review.vercel.app/",
+        "redirect": true
+      },
+      "github": {
+        "show": true,
+        "link": "https://github.com/akash-cs13/Smoll-GPT"
+      },
+      "other": [
+        {
+          "show": true,
+          "name": "Blog",
+          "link": "https://wine-review.vercel.app/blog",
+          "redirect": true
+        },
+        {
+          "show": true,
+          "name": "Playground",
+          "link": "https://wine-review.vercel.app/playground",
+          "redirect": true
+        }
+      ]
+    }
+  },
+    {
       "name": "M.A.R.K Dashboard",
       "year": "2023",
       "tags": ["SvelteKit"],
